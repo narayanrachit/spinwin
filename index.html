@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+            canvas {
+                width: 100%;
+                max-width: 800px;
+                border-radius: 0px 0px 30px 30px;
+            }
+            
+            canvas:before{
+                content: `<div id="gameTop"><div>`;
+                background-color: yellowgreen;
+                width: 80%;
+                height: 10
+            }
+            body {
+                background: url('assets/Background.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                text-align: center;
+            }
+            #bg-content {
+                width: 100%;
+                max-width: 800px;
+                height: 20px;
+                background-color: aquamarine;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "bg-content">
+        <div id = "gameDiv">
+            <script src="js/phaser.js"></script>
+            <script src="js/game.js"></script>
+            </div>
+        
+        <script src="js/sweetalert.min.js"></script>
+        </div><br>
+    </body>
+</html>
