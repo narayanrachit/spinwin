@@ -1,7 +1,7 @@
 
 let prizes_config = {
     count:12,
-    prize_names : ["3000 Credits","35% Off","Hard Luck","70% OFF","Swagpack","100% OFF","Netflix","50% Off","Amazon Voucher","2 Extra Spin", "CB Tshirt","CB Book"]
+    prize_names : ["01","02","03","04","05","06","07","08","09","10", "11","12"]
 }
 
 
@@ -9,8 +9,8 @@ let prizes_config = {
 let config = {
     type : Phaser.CANVAS,
     width : 800,
-    height:600,
-    backgroundColor : 0xffcc00,
+    height:360,
+    
     
     scene : {
         preload : preload,
@@ -42,17 +42,17 @@ function create(){
     background.setScale(0.20);
     
      //lets create the stand
-    let stand = this.add.sprite(W/2,H/2 + 250,'stand');
+    let stand = this.add.sprite(W/2,H/2 + 120,'stand');
     stand.setScale(0.25);
     
     //lets create a pin
-    let pin = this.add.sprite(W/2,H/2-250,"pin");
+    let pin = this.add.sprite(W/2,H/2-120,"pin");
     pin.setScale(0.25);
     pin.depth = 1;
     
     //let create wheel
     this.wheel = this.add.sprite(W/2,H/2,"wheel");
-    this.wheel.setScale(0.25); 
+    this.wheel.setScale(0.20); 
     //this.wheel.alpha = 0.5;
     
     
@@ -81,7 +81,7 @@ function update(){
 function spinwheel(){
     
     let rounds = Phaser.Math.Between(2,4);
-    let degrees = Phaser.Math.Between(0,11)*30;
+    let degrees = Phaser.Math.Between(0,11)*35;
     
     let total_angle = rounds*360 + degrees;
     console.log(total_angle);
